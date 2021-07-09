@@ -10,9 +10,10 @@ jobs:
    steps:
       - run:
           command: |
+            apt-get -y update && apt-get -y upgrade && apt-get -y install bc bison build-essential curl flex g++-multilib gcc gcc-multilib clang git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev unzip openjdk-8-jdk python ccache libtinfo5 repo libstdc++6 wget libssl-dev rsync golang-go
+            dpkg-reconfigure --frontend noninteractive tzdata
             apt-get -y update && apt-get -y upgrade && apt-get -y install git cmake clang-format clang-tidy clang libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 libomp-dev libomp5 llvm-dev llvm-runtime llvm python build-essential make bzip2 libncurses5-dev libssl-dev ninja-build liblz4-tool bc curl unzip lzop ccache flex strace bison libc6 libstdc++6 wget p7zip-full zip python3 python3-pip tzdata gcc-arm-linux-gnueabi nano bc bison ca-certificates curl flex gcc git libc6-dev libssl-dev openssl python ssh wget zip zstd make clang gcc-arm-linux-gnueabi software-properties-common
             apt-get -y install bc binutils-dev bison ca-certificates ccache clang cmake curl file flex gcc g++ git libelf-dev libssl-dev make ninja-build python3 texinfo u-boot-tools xz-utils zlib1g-dev
-            dpkg-reconfigure --frontend noninteractive tzdata
             curl https://raw.githubusercontent.com/AnGgIt86/llvm-build/main/llvm-tc_build.sh -o llvm-tc_build.sh
             source ./llvm-tc_build.sh
 workflows:
