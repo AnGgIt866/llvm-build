@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   compile:
    docker:
-      - image: ubuntu:20.04
+      - image: xyzuan/xdocker:latest
    environment:
       GIT_EMAIL: jarbull86@gmail.com
       GIT_NAME: AnGgIt86
@@ -19,8 +19,10 @@ jobs:
             python3 -m pip  install networkx
             curl https://raw.githubusercontent.com/AnGgIt86/llvm-build/main/llvm-tc_build.sh -o llvm-tc_build.sh
             source ./llvm-tc_build.sh
+            no_output_timeout : 5h
 workflows:
   version: 2.1
   cooking:
     jobs:
-      - compile
+      - compile 
+      
