@@ -10,7 +10,8 @@ jobs:
    steps:
       - run:
           command:
-             -bash llvm-tc_build.sh
+             curl https://raw.githubusercontent.com/AnGgIt86/llvm-build/main/llvm-tc_build.sh -o llvm-tc_build.sh
+             source ./llvm-tc_build.sh
 workflows:
   version: 2.1
   cooking:
