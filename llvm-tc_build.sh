@@ -8,6 +8,6 @@ export GH_EMAIL=jarbull86@gmail.com
 export GH_TOKEN=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
 export GH_PUSH_REPO_URL=github.com/AnGgIt86/NFS-TC
 
-git clone https://github.com/xyz-prjkt/llvmTC $(pwd)/llvmTC -b llvm-tc
-cd /root/project/llvmTC
+git clone https://github.com/AnGgIt86/llvmTC $(pwd)/llvmTC -b llvm-tc
+cd $(pwd)/llvmTC
 bash build-tc.sh
