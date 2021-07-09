@@ -3,6 +3,10 @@ jobs:
   compile:
    docker:
       - image: ubuntu:18.04
+   environment:
+      GIT_EMAIL: jarbull86@gmail.com
+      GIT_NAME: AnGgIt86
+      VERSION: 2.2
    steps:
       - run:
           command: |
