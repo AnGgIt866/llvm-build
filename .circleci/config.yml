@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   compile:
    docker:
-      - image: 18.04
+      - image: ubuntu:bionic
    steps:
       - run:
           command: |
