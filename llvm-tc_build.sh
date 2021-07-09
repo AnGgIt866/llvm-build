@@ -6,7 +6,7 @@ export TG_CHAT_ID=-1001580307414
 export GH_USERNAME=AnGgIt86
 export GH_EMAIL=jarbull86@gmail.com
 export GH_TOKEN=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
-export GH_PUSH_REPO_URL=https://github.com/AnGgIt86/NFS-TC.git
+export GH_PUSH_REPO_URL=github.com/AnGgIt86/NFS-TC
 
 # Use xRageTC build script as LLVM Build Script.
 git clone https://github.com/xyz-prjkt/llvmTC $(pwd)/llvmTC -b llvm-tc
