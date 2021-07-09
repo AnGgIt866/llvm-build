@@ -3,23 +3,13 @@ jobs:
   compile:
    docker:
       - image: xyzuan/xdocker:latest
-   environment:
-      GIT_EMAIL: jarbull86@gmail.com
-      GIT_NAME: AnGgIt86
-      LLVM_NAME: NFS-Projects
-      TG_TOKEN: 1852697615:AAGKDF9cYNnTY4Ylm7XjBrsssS31eTtqYfk
-      TG_CHAT_ID: -1001580307414
-      GH_USERNAME: AnGgIt86
-      GH_EMAIL: jarbull86@gmail.com
-      GH_TOKEN: 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
-      GH_PUSH_REPO_URL: github.com/AnGgIt86/NFS-TC
-      VERSION: rev1.5_template
    steps:
       - run:
           command: |
             dpkg-reconfigure --frontend noninteractive tzdata
             curl https://raw.githubusercontent.com/AnGgIt86/llvm-build/main/llvm-tc_build.sh -o llvm-tc_build.sh
             source ./llvm-tc_build.sh
+            no_output_timeout : 5h
 workflows:
   version: 2.1
   cooking:
