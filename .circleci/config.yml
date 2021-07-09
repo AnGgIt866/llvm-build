@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   compile:
    docker:
-      - image: ubuntu:20.4.2
+      - image: ubuntu:18.04.5
    environment:
       GIT_EMAIL: jarbull86@gmail.com
       GIT_NAME: AnGgIt86
