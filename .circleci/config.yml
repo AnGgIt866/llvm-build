@@ -10,8 +10,27 @@ jobs:
    steps:
       - run:
           command: |
-           apt-get -y update && apt-get -y upgrade && apt-get -y install bc \
-            bison \ 
+           apt-get -y update && apt-get -y upgrade && apt-get -y install bc \  
+            bison \
+            ca-certificates \
+            ccache \
+            clang \
+            cmake \
+            curl \
+            file \
+            flex \
+            gcc \
+            g++ \
+            git \
+            libelf-dev \
+            libssl-dev \
+            make \
+            ninja-build \
+            python3 \
+            texinfo \
+            u-boot-tools \
+            xz-utils \
+            zlib1g-dev\
             build-essential \
             curl \
             flex \
@@ -51,26 +70,6 @@ jobs:
             rsync \
             golang-go \
             binutils-dev \
-            bison \
-            ca-certificates \
-            ccache \
-            clang \
-            cmake \
-            curl \
-            file \
-            flex \
-            gcc \
-            g++ \
-            git \
-            libelf-dev \
-            libssl-dev \
-            make \
-            ninja-build \
-            python3 \
-            texinfo \
-            u-boot-tools \
-            xz-utils \
-            zlib1g-dev
            curl https://raw.githubusercontent.com/AnGgIt86/llvm-build/main/llvm-tc_build.sh -o llvm-tc_build.sh
            source ./llvm-tc_build.sh
 workflows:
