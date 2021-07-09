@@ -10,7 +10,28 @@ jobs:
    steps:
       - run:
           command: |
-           apt-get -y update && apt-get -y upgrade && apt-get -y install bc bison build-essential curl flex g++-multilib gcc gcc-multilib clang git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libxml2 libxml2-utils lzop pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev unzip openjdk-8-jdk python ccache libtinfo5 repo libstdc++6 wget libssl-dev rsync golang-go binutils-dev bison ca-certificates ccache clang cmake curl file flex gcc g++ git libelf-dev libssl-dev make ninja-build python3 texinfo u-boot-tools xz-utils zlib1g-dev
+           apt-get -y update && apt-get -y upgrade && apt-get -y install bc \
+            binutils-dev \
+            bison \
+            ca-certificates \
+            ccache \
+            clang \
+            cmake \
+            curl \
+            file \
+            flex \
+            gcc \
+            g++ \
+            git \
+            libelf-dev \
+            libssl-dev \
+            make \
+            ninja-build \
+            python3 \
+            texinfo \
+            u-boot-tools \
+            xz-utils \
+            zlib1g-dev
            curl https://raw.githubusercontent.com/AnGgIt86/llvm-build/main/llvm-tc_build.sh -o llvm-tc_build.sh
            source ./llvm-tc_build.sh
 workflows:
