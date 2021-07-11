@@ -1,0 +1,15 @@
+version: v1.0
+name: Docker
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: 'xyzuan/xdocker:latest'
+blocks:
+  - name: Build
+    task:
+      jobs:
+        - name: docker build
+          commands:
+            - bash llvm-tc_build.sh
+            - checkout
+            - docker build -t your-image .
